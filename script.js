@@ -66,86 +66,86 @@ function mouseAnimation() {
 mouseAnimation();
 
 
-function featuresAnimator(){
-    document.querySelectorAll("#about-cont").forEach(function(div){
+function featuresAnimator() {
+    document.querySelectorAll("#about-cont").forEach(function (div) {
         var image = div.querySelectorAll("img");
-    
-        div.addEventListener("mouseenter", function(){
-            image.forEach(function(image){
+
+        div.addEventListener("mouseenter", function () {
+            image.forEach(function (image) {
                 gsap.to(image, {
                     opacity: 1,
                     duration: 1,
-                    delay:0.1,
-                    ease:Power1,
-            
+                    delay: 0.1,
+                    ease: Power1,
+
                 }, "a")
             })
         })
-    
-        div.addEventListener("mouseleave", function(){
-            image.forEach(function(image){
+
+        div.addEventListener("mouseleave", function () {
+            image.forEach(function (image) {
                 gsap.to(image, {
                     opacity: 0,
                     duration: 1,
-                    delay:0.1,
-                    ease:Power1,
-            
+                    delay: 0.1,
+                    ease: Power1,
+
                 }, "a")
             })
         })
-    
+
         var text = div.querySelectorAll("h1")
-    
-        div.addEventListener("mouseenter",function(){
-            text.forEach(function(text){
+
+        div.addEventListener("mouseenter", function () {
+            text.forEach(function (text) {
                 gsap.to(text, {
-                    x:150,
+                    x: 150,
                     duration: 1,
-                    delay:0.1,
-                    ease:Power1,
-            
+                    delay: 0.1,
+                    ease: Power1,
+
                 }, "a")
             })
         })
-    
-        div.addEventListener("mouseleave",function(){
-            text.forEach(function(text){
+
+        div.addEventListener("mouseleave", function () {
+            text.forEach(function (text) {
                 gsap.to(text, {
-                    x:0,
+                    x: 0,
                     duration: 1,
-                    delay:0.1,
-                    ease:Power1,
-            
+                    delay: 0.1,
+                    ease: Power1,
+
                 }, "a")
             })
         })
-        
+
     })
-    
+
 }
 featuresAnimator();
 
-function mouseMover(){
+function mouseMover() {
     var container = document.querySelector("#about");
-var mouse = document.querySelector("#mouse-follower");
+    var mouse = document.querySelector("#mouse-follower");
 
-container.addEventListener("mousemove", function(dets){
-    mouse.style.left = `${dets.clientX}px`;
-    mouse.style.top = `${dets.clientY}px`;
-})
-
-container.addEventListener("mouseenter", function(){
-    gsap.to(mouse,{
-        scale:1,
-
+    container.addEventListener("mousemove", function (dets) {
+        mouse.style.left = `${dets.clientX}px`;
+        mouse.style.top = `${dets.clientY}px`;
     })
-})
 
-container.addEventListener("mouseleave", function(){
-    gsap.to(mouse,{
-        scale:0,
-        
+    container.addEventListener("mouseenter", function () {
+        gsap.to(mouse, {
+            scale: 1,
+
+        })
     })
-})
+
+    container.addEventListener("mouseleave", function () {
+        gsap.to(mouse, {
+            scale: 0,
+
+        })
+    })
 }
 mouseMover();
